@@ -3,14 +3,14 @@ import numpy as np
 from osgeo import gdal
 
 # constants
-FILENAME = 's1a-iw-grd-vv-20150823t070201-20150823t070226-007387-00a28a-001.tiff'
+FILEPATH = 'imgs/s1a-iw-grd-vv-20150823t070201-20150823t070226-007387-00a28a-001.tiff'
 SPLIT_SIZE = 1000
 
 # initialize driver
 driver = gdal.GetDriverByName('GTiff')
 
 # read tiff file
-dataset = gdal.Open(FILENAME)
+dataset = gdal.Open(FILEPATH)
 
 # extract band
 band = dataset.GetRasterBand(1)
